@@ -1,11 +1,11 @@
-class ButtonHandler {
+class PlayButton {
     constructor(text, x, y) {
         this.text = text;
         this.x = x;
         this.y = y;
         this.button = createButton(this.text);
-        this.button.mousePressed(() => this._alteraCena());
-        this.button.addClass('botao-tela-inicial');
+        this.button.mousePressed(() => this._setScene());
+        this.button.addClass('start-button');
     }
 
     draw() {
@@ -13,8 +13,8 @@ class ButtonHandler {
         this.button.center('horizontal');
     }
 
-    _alteraCena() {
+    _setScene() {
         this.button.remove();
-        cenaAtual = 'jogo';
+        actualScene = 'game';
     }
 }

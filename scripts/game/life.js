@@ -14,7 +14,7 @@ class Life {
         for(let i = 0; i < this.lifes; i++) {
             const margin = i * 30;
             const position = this.x * (i + 1); 
-            image(imagemVida, position + margin, this.y, this.width, this.height);
+            image(lifeImage, position + margin, this.y, this.width, this.height);
         }
         
     }

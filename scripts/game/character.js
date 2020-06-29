@@ -1,6 +1,6 @@
 class Character extends Animation{
-    constructor(matriz, image, x, positionY, widthCharacter, heightCharacter, widthSprite, heightSprite) {
-        super(matriz, image, x, positionY, widthCharacter, heightCharacter, widthSprite, heightSprite);
+    constructor(sprite, x, positionY, widthCharacter, heightCharacter) {
+        super(sprite, x, positionY, widthCharacter, heightCharacter);
         
         this.positionY = positionY;
 
@@ -17,7 +17,7 @@ class Character extends Animation{
     jump() {
         if (this.jumps < 2) {
             this.jumpVelocity = this.jumpHeight;
-            somDoPulo.play();
+            jumpSound.play();
             this.jumps++;
         }
     }
@@ -58,8 +58,6 @@ class Character extends Animation{
             inimigo.y + inimigo.height / 2,
             inimigo.width,
         );
-
-        
         /**
         rect(this.x, this.y, this.width, this.height);
         rect(inimigo.x,inimigo.y,inimigo.width,inimigo.height);

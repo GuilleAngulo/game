@@ -1,20 +1,18 @@
 class InitialScreen {
-    constructor() {
-
-    }
+    constructor() {}
 
     draw() {
-        this._imagemDeFundo();
-        this._texto();
-        this._botao();
+        this._backgroundImage();
+        this._text();
+        this._button();
     }
 
-    _imagemDeFundo() {
-        image(imagemTelaInicial, 0, 0, width, height);
+    _backgroundImage() {
+        image(homeImage, 0, 0, width, height);
     }
 
-    _texto() {
-        textFont(fonteTelaInicial);
+    _text() {
+        textFont(font);
         textAlign(CENTER);
         textSize(50);
         text('The adventures of', width / 2, height / 5 );
@@ -24,8 +22,8 @@ class InitialScreen {
         text('Press SPACE or UP to Jump', width / 2, height / 5 * 2 );
     }
 
-    _botao() {
-        botaoGerenciador.y = height / 7 * 5;
-        botaoGerenciador.draw();
+    _button() {
+        playButton.y = height / 7 * 5;
+        playButton.draw();
     }
 }

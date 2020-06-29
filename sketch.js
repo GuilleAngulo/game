@@ -2,21 +2,21 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(40);
 
-  jogo = new Game();
-  telaInicial = new InitialScreen();
-  jogo.setup();
-  cenas = {
-    jogo,
-    telaInicial
+  game = new Game();
+  initialScreen = new InitialScreen();
+  game.setup();
+  scenes = {
+    game,
+    initialScreen
   };
-  botaoGerenciador = new ButtonHandler('Start Game', width / 2, height / 2);
+  playButton = new PlayButton('Start Game', width / 2, height / 2);
 }
 
 function keyPressed() {
-  jogo.keyPressed(key);
+  game.keyPressed(key);
 }
 
 function draw() {
-  cenas[cenaAtual].draw();
+  scenes[actualScene].draw();
 }
 

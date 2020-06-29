@@ -1,20 +1,23 @@
 function preload() {
-    imagemCenario = loadImage('imagens/cenario/floresta.png');
-    imagemPersonagem = loadImage('imagens/personagem/correndo.png');
-    imagemPersonagemPulando = loadImage('imagens/personagem/pular.png');
-    imagemInimigo = loadImage('imagens/inimigos/gotinha.png');
-    imagemInimigoGrande = loadImage('imagens/inimigos/troll.png');
-    imagemInimigoVoador = loadImage('imagens/inimigos/gotinha-voadora.png');
-    imagemGameOver = loadImage('imagens/assets/game-over.png');
-    imagemTelaInicial = loadImage('imagens/cenario/initial-screen.png');
-    imagemVida = loadImage('imagens/assets/heart.png');
-    
-    fonteTelaInicial = loadFont('imagens/assets/fonteTelaInicial.otf');
-    
-    fita = loadJSON('cartucho/fita.json');
+    /** ENEMIES MAP */
+    gameMap = loadJSON('map/game.json');
 
-    somDoJogo = loadSound('sons/trilha_jogo.mp3');
-    somDoPulo = loadSound('sons/somPulo.mp3');
-    somDoGameOver = loadSound('sons/game-over.flac');
-    somPerdeVida = loadSound('sons/loseLife.mp3');
+    /** IMAGES */
+    forestImage = loadImage('images/scenario/forest.png');
+    homeImage = loadImage('images/scenario/initial-screen.png');
+    characterImage = loadImage('images/character/running.png');
+    enemyImage = loadImage('images/enemies/enemy.png');
+    enemyTrollImage = loadImage('images/enemies/troll.png');
+    enemyWingsImage = loadImage('images/enemies/enemy-wings.png');
+    gameOverImage = loadImage('images/assets/game-over.png');
+    lifeImage = loadImage('images/assets/heart.png');
+    
+    /** FONTS */
+    font = loadFont('images/assets/font.otf');
+
+    /** SOUNDS */
+    soundtrack = loadSound('sounds/soundtrack.mp3');
+    jumpSound = loadSound('sounds/jump.mp3');
+    gameOverSound = loadSound('sounds/game-over.flac');
+    loseLifeSound = loadSound('sounds/lose-life.mp3');
   }

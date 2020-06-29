@@ -15,9 +15,9 @@ class InitialScreen {
         textFont(font);
         textAlign(CENTER);
         textSize(50);
-        text('The adventures of', width / 2, height / 5 );
+        text('The adventures of', width / 2, height / 6 );
         textSize(150);
-        text('Hipsta', width / 2, height / 5 * 1.5);
+        text('Witch', width / 2, height / 5 * 1.5);
         textSize(40);
         text('Press SPACE or UP to Jump', width / 2, height / 5 * 2 );
     }
